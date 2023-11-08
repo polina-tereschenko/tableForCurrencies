@@ -71,11 +71,29 @@ with open(INPUT_YAML) as file:
         elif isinstance(yaml_file_object, dict):
             print_dic_in_table(yaml_file_object)
     
-    table = prettyTable.get_string(attributes={"name": key, "id": key, "class": key, "style": "width: 1450px;table-layout: fixed;overflow-wrap: break-word;"})
+    table = prettyTable.get_string()
     table = table.replace("+", "|")
     table_lines = table.split('\n')
     table_lines = table_lines[1:-1]
     table = '\n'.join(table_lines)
     body_st.append(table)
-    
-print(listToString(body_st)) 
+
+with open("README.md", "r") as file:
+    lines = file.readlines()
+
+in_block = False
+updated_lines = []
+for line in lines:
+    if line.strip() == "## Supported Currencies":
+        in_block = True
+        updated_lines.append(line)
+        updated_lines.extend(body_st)
+    elif not in_block:
+        updated_lines.append(line)
+    if line.strip() == "## References":
+        in_block = False
+
+with open("README.md", "w") as file:
+    file.writelines(updated_lines)
+
+print(listToString(body_st))
