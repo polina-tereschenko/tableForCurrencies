@@ -2,12 +2,11 @@ name: Update README
 
 on:
   push:
-    branches: main
+    paths: currencies.yaml
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -25,17 +24,12 @@ jobs:
       - name: Install prettytable
         run: pip install PrettyTable
 
-      - name: Install Path
-        run: pip install Path
-
       - name: Run Python script
         run: python yaml_to_table.py 
 
       - name: Update README
         run: |
-          sed -i 's/## Supported Currencies/## References/' README.md
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Action"
+          sed -i '/## Supported Currencies/, /## References/ { /## Supported Currencies/,/## References/!d }' README.md
           git add README.md
-          git commit -m "Update README"
+          git commit -m "Update README"{ /## Supported Currencies/,/## References/!d }'
           git push https://${{ secrets.GH_SECTER }}@github.com/polina-tereschenko/tableForCurrencies.git

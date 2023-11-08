@@ -29,6 +29,173 @@
    Fiat: 
    Crypto: ":heavy_check_mark:"
    Title: Bitcoin Cash
+   Code: BAT
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: BAT
+   Reference URL: https://basicattentiontoken.org/
+-
+   Code: BCH
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Bitcoin Cash
+   Reference URL: https://bitcoincash.org/
+-
+   Code: BTC
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Bitcoin
+   Reference URL: https://bitcoin.org/
+-
+   Code: BTT
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: BitTorrent Token
+   Reference URL: https://www.bittorrent.com/token/btt/
+-
+   Code: DASH
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Dash
+   Reference URL: https://www.dash.org/
+-
+   Code: ETH
+   Exponent: 18
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Ethereum
+   Reference URL: https://ethereum.org/
+-
+   Code: EUR
+   Exponent: 2
+   Iso4217: 978
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: Euro
+   Reference URL: https://en.wikipedia.org/wiki/Euro
+-
+   Code: GBP
+   Exponent: 2
+   Iso4217: 826
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: Pound sterling
+   Reference URL: https://en.wikipedia.org/wiki/Pound_sterling
+-
+   Code: LTC
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Litecoin
+   Reference URL: https://litecoin.com/
+-
+   Code: MHC
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: MetaHash
+   Reference URL: https://metahash.org/
+-
+   Code: NEO
+   Exponent: 8
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: NEO
+   Reference URL: https://neo.org/
+-
+   Code: ONG
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Ontology Gas
+   Reference URL: https://ont.io/
+-
+   Code: ONT
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Ontology
+   Reference URL: https://ont.io/
+-
+   Code: RUB
+   Exponent: 2
+   Iso4217: 643
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: Russian Rouble
+   Reference URL: https://en.wikipedia.org/wiki/Russian_ruble
+-
+   Code: TRX
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: TRON
+   Reference URL: https://tron.network/
+-
+   Code: USD
+   Exponent: 2
+   Iso4217: 840
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: United States dollar
+   Reference URL: https://en.wikipedia.org/wiki/United_States_dollar
+-
+   Code: USDT
+   Exponent: 18
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Tether
+   Reference URL: https://tether.to/
+-
+   Code: XLM
+   Exponent: 7
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Stellar
+   Reference URL: https://www.stellar.org/
+-
+   Code: XRP
+   Exponent: 7
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Ripple
+   Reference URL: https://ripple.com/xrp
+-
+   Code: XTZ
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Tezos
+   Reference URL: https://tezos.com/
+-
+   Code: UAH
+   Exponent: 2
+   Iso4217: 980
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: Ukrainian hryvnia
+   Reference URL: https://en.wikipedia.org/wiki/Ukrainian_hryvnia
    Reference URL: https://bitcoincash.org/
 -
    Code: BTC
