@@ -16,9 +16,13 @@ jobs:
         with:
           python-vertion: 3
 
-      - name: Install dependencies
+      - name: Install PyYAML
         run: pip install PyYAML
+
+      - name: Install oyaml
         run: pip install oyaml
+
+      - name: Install prettytable
         run: pip install prettytable
 
       - name: Run Python script
