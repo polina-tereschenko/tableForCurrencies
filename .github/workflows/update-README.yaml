@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up python
-        uses: acrion/setup-python@v3
+        uses: acrtions/setup-python@v3
         with:
           python-vertion: 3
 
