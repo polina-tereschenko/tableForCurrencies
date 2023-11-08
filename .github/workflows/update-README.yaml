@@ -24,6 +24,9 @@ jobs:
       - name: Install prettytable
         run: pip install PrettyTable
 
+      - name: Install prettytable
+        run: pip install Path
+
       - name: Run Python script
         run: python update-README.py 
 
