@@ -1,0 +1,31 @@
+name: Update README
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    runs-on: linux
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: acrion/setup-python@v3
+        with:
+          python-vertion: 3
+
+      - name: Install dependencies
+        run: pip install PyYAML
+
+      - name: Run Python script
+        run: python yaml_to_table.py 
+
+      - name: Update README
+        run: |
+          sed -i 's/## Supported Currencies/## References/' README.md
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+          git commit -m "Update README"
+          git push
