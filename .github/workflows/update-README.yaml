@@ -36,4 +36,4 @@ jobs:
           git config --global user.name "GitHub Action"
           git add README.md
           git commit -m "Update README"
-          git push https://${{ secrets.GH_SECRET }}@github.com/polina-tereschenko/tableForCurrencies.git
+          git push https://${{secrets.GH_SECRET}}@github.com/polina-tereschenko/tableForCurrencies.git
