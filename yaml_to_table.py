@@ -2,22 +2,17 @@ import sys
 from pathlib import Path
 import oyaml as yaml
 from prettytable import PrettyTable
-
 INPUT_YAML = "currencies.yaml"
-
 in_file = Path(INPUT_YAML)
 if not in_file.is_file():
     sys.exit("Input file [" + INPUT_YAML + "] does not exist")
-
 SPACE_CHAR = ''
-
 def listToString(inList):
     """Convert list to String"""
     ret = ""
     for line in inList:
         ret = ret + line
     return ret
-
 def printDic(inDictionary, inPTable, indent):
     for item in inDictionary:
         if isinstance(item, dict):
@@ -33,15 +28,12 @@ def printDic(inDictionary, inPTable, indent):
                 for dicInDic in moreStuff:
                     if dicInDic is not None:
                         inPTable.add_row([])
-
 with open(INPUT_YAML) as file:
     yaml_file_object = yaml.load(file, Loader=yaml.FullLoader)
-
     i = 0
     for key in yaml_file_object:
         body_st = []
         prettyTable = PrettyTable(["Code", "Exponent", "Iso4217", "Fiat", "Crypto", "Title", "Reference URL"])
-
         def print_dic_in_table(data):
             code = data.get("Code", "")
             exponent = data.get("Exponent", "")
@@ -50,7 +42,6 @@ with open(INPUT_YAML) as file:
             crypto = data.get("Crypto", "")
             title = data.get("Title", "")
             reference_url = data.get("Reference URL", "")
-
             code = code if code is not None else ""
             exponent = exponent if exponent is not None else ""
             iso4217 = iso4217 if iso4217 is not None else ""
@@ -63,7 +54,6 @@ with open(INPUT_YAML) as file:
             if (data.get == None):
                 for dic in yaml_file_object:
                     print_dic_in_table("")
-
         if isinstance(yaml_file_object, list):
             for dic in yaml_file_object:
                 if isinstance(dic, dict):
@@ -84,6 +74,7 @@ with open("README.md", "r") as file:
 in_supported_currencies = False
 updated_lines = []
 table_started = False
+references_found = False
 references_block = []
 
 for line in lines:
@@ -93,15 +84,25 @@ for line in lines:
         table_started = True
     elif line.strip() == "## References":
         in_supported_currencies = False
+        if table_started:
+            references_found = True
         table_started = False
     elif in_supported_currencies and table_started:
-        updated_lines.append(line)
-    elif not in_supported_currencies:
-        updated_lines.append(line)
-    elif in_supported_currencies and not table_started:
         references_block.append(line)
+    else:
+        updated_lines.append(line)
+
+updated_lines.extend(body_st)
+references_found = False
+for line in updated_lines:
+    if line.strip() == "## References":
+        references_found = True
+        break
+
+if not references_found:
+    updated_lines.append("## References\n\n")
+    updated_lines.extend(references_block)
 
 with open("README.md", "w") as file:
     file.writelines(updated_lines)
-
 print(listToString(body_st))
