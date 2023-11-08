@@ -99,8 +99,6 @@ for line in lines:
     elif not in_supported_currencies and not table_started:
         updated_lines.append(line)
 
-updated_lines.extend(body_st)
-
 if not references_found:
     updated_lines.append("## References\n\n")
 
