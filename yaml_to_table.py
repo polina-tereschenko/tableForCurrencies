@@ -95,18 +95,20 @@ for line in lines:
         in_supported_currencies = False
         table_started = False
     elif in_supported_currencies and table_started:
-        references_block.append(line)
-    else:
         updated_lines.append(line)
+    elif not in_supported_currencies:
+        updated_lines.append(line)
+    elif in_supported_currencies and not table_started:
+        references_block.append(line)
 
-references_found = False
+supported_currencies_found = False
 for line in updated_lines:
-    if line.strip() == "## References":
-        references_found = True
+    if line.strip() == "## Supported Currencies":
+        supported_currencies_found = True
         break
 
-if not references_found:
-    updated_lines.append("## References\n\n")
+if not supported_currencies_found:
+    updated_lines.append("## Supported Currencies\n\n")
     updated_lines.extend(references_block)
 
 with open("README.md", "w") as file:
