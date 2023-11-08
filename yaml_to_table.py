@@ -74,7 +74,6 @@ with open("README.md", "r") as file:
 in_supported_currencies = False
 updated_lines = []
 table_started = False
-references_found = False
 references_block = []
 
 for line in lines:
