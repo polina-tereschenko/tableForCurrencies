@@ -108,7 +108,7 @@ for line in updated_lines:
         break
 
 if not supported_currencies_found:
-    updated_lines.append("## Supported Currencies\n\n")
+    updated_lines.append("## References\n\n")
     updated_lines.extend(references_block)
 
 with open("README.md", "w") as file:
