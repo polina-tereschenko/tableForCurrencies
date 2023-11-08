@@ -29,7 +29,7 @@ jobs:
 
       - name: Update README
         run: |
-          sed -i '/## Supported Currencies/, /## References/ { /## Supported Currencies/,/## References/!d }' README.md
+          sed -i '/## Supported Currencies/,/## References/ { /## Supported Currencies/,/## References/!d }' README.md
           git add README.md
           git commit -m "Update README"{ /## Supported Currencies/,/## References/!d }'
           git push https://${{ secrets.GH_SECTER }}@github.com/polina-tereschenko/tableForCurrencies.git
