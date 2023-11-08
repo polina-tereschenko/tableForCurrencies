@@ -40,8 +40,7 @@ Available for [Dart](https://pub.dev/packages/freemework_enum_currency), [C#](TD
 | XLM  |    7     |         |                    | :heavy_check_mark: |       Stellar        |              https://www.stellar.org/              |
 | XRP  |    7     |         |                    | :heavy_check_mark: |        Ripple        |               https://ripple.com/xrp               |
 | XTZ  |    6     |         |                    | :heavy_check_mark: |        Tezos         |                 https://tezos.com/                 |
-| UAH  |    2     |   980   | :heavy_check_mark: |                    |  Ukrainian hryvnia   |                                                    |
-
+| UAH   | 2         | 980      | :heavy_check_mark:  |                     | Ukrainian hryvnia                | https://en.wikipedia.org/wiki/Ukrainian_hryvnia     |
 
 ## Refrences
 
