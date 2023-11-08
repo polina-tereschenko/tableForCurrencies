@@ -4,7 +4,7 @@ import oyaml as yaml
 from prettytable import PrettyTable
 import argparse
 
-INPUT_YAML = "/home/polina/projects/tableForCurrencies/currencis.yaml"
+INPUT_YAML = "/home/polina/projects/tableForCurrencies/currencies.yaml"
 
 in_file = Path(INPUT_YAML)
 if not in_file.is_file():
