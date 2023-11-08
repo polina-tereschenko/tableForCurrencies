@@ -23,7 +23,10 @@ jobs:
         run: pip install oyaml
 
       - name: Install prettytable
-        run: pip install prettytable
+        run: pip install PrettyTable
+
+      - name: Install Path
+        run: pip install Path
 
       - name: Run Python script
         run: python yaml_to_table.py 
