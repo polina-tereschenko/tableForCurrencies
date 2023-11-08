@@ -32,7 +32,6 @@ jobs:
 
       - name: Update README
         run: |
-          awk '/## Supported Currencies/,/## References/{next} 1' README.md > temp.md && mv temp.md README.md
           git add README.md
           git commit -m "Update README"{ /## Supported Currencies/,/## References/!d }'
           git push https://${{ secrets.GH_SECTER }}@github.com/polina-tereschenko/tableForCurrencies.git
