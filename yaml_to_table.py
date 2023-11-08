@@ -101,16 +101,6 @@ for line in lines:
     elif in_supported_currencies and not table_started:
         references_block.append(line)
 
-supported_currencies_found = False
-for line in updated_lines:
-    if line.strip() == "## Supported Currencies":
-        supported_currencies_found = True
-        break
-
-if not supported_currencies_found:
-    updated_lines.append("## References\n\n")
-    updated_lines.extend(references_block)
-
 with open("README.md", "w") as file:
     file.writelines(updated_lines)
 
