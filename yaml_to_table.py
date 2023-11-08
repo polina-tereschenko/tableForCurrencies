@@ -81,20 +81,18 @@ with open(INPUT_YAML) as file:
 with open("README.md", "r") as file:
     lines = file.readlines()
 
-in_block = False
+in_supported_currencies = False
 updated_lines = []
-table_started = False
 
 for line in lines:
     if line.strip() == "## Supported Currencies":
-        in_block = True
+        in_supported_currencies = True
         updated_lines.append(line)
-        table_started = True
         updated_lines.extend(body_st)
-    elif line.strip() == "## References":
-        in_block = False
-        table_started = False
-    elif not in_block and not table_started:
+    elif in_supported_currencies and line.strip() == "## References":
+        in_supported_currencies = False
+        updated_lines.append(line)
+    elif not in_supported_currencies:
         updated_lines.append(line)
 
 with open("README.md", "w") as file:
