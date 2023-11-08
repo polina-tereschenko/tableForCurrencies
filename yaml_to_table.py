@@ -84,7 +84,7 @@ with open("README.md", "r") as file:
 in_supported_currencies = False
 updated_lines = []
 table_started = False
-references_found = False
+references_block = []
 
 for line in lines:
     if line.strip() == "## Supported Currencies":
@@ -93,16 +93,21 @@ for line in lines:
         table_started = True
     elif line.strip() == "## References":
         in_supported_currencies = False
-        if table_started:
-            references_found = True
         table_started = False
-    elif not in_supported_currencies and not table_started:
+    elif in_supported_currencies and table_started:
+        references_block.append(line)
+    else:
         updated_lines.append(line)
 
-updated_lines.extend(body_st)
+references_found = False
+for line in updated_lines:
+    if line.strip() == "## References":
+        references_found = True
+        break
 
 if not references_found:
     updated_lines.append("## References\n\n")
+    updated_lines.extend(references_block)
 
 with open("README.md", "w") as file:
     file.writelines(updated_lines)
