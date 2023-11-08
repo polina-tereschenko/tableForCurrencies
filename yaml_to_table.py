@@ -91,10 +91,6 @@ for line in lines:
     else:
         updated_lines.append(line)
 
-if not references_found:
-    updated_lines.append("## References\n\n")
-    updated_lines.extend(references_block)
-
 with open("README.md", "w") as file:
     file.writelines(updated_lines)
 print(listToString(body_st))
