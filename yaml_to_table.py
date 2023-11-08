@@ -89,7 +89,9 @@ for line in lines:
         in_supported_currencies = True
         updated_lines.append(line)
         updated_lines.extend(body_st)
-    elif not in_supported_currencies:
+    elif in_supported_currencies:
+        updated_lines.append(line)
+    else:
         updated_lines.append(line)
 
 with open("README.md", "w") as file:
