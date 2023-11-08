@@ -33,5 +33,5 @@ jobs:
       - name: Update README
         run: |
           git add README.md
-          git commit -m "Update README"{ /## Supported Currencies/,/## References/!d }'
+          git commit -m "Update README"
           git push https://${{ secrets.GH_SECTER }}@github.com/polina-tereschenko/tableForCurrencies.git
