@@ -25,6 +25,9 @@ jobs:
         run: pip install PrettyTable
 
       - name: Run Python script
+        run: python update-README.py 
+
+      - name: Run Python script
         run: python yaml_to_table.py 
 
       - name: Update README
