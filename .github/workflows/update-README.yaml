@@ -25,9 +25,6 @@ jobs:
       - name: Install prettytable
         run: pip install prettytable
 
-      - name:
-        run: /home/polina/projects/tableForCurrencies/currencies.yaml
-
       - name: Run Python script
         run: python yaml_to_table.py 
 

@@ -2,7 +2,6 @@ import sys
 from pathlib import Path
 import oyaml as yaml
 from prettytable import PrettyTable
-import argparse
 
 INPUT_YAML = "/home/polina/projects/tableForCurrencies/currencies.yaml"
 
@@ -78,4 +77,5 @@ with open(INPUT_YAML) as file:
     table_lines = table_lines[1:-1]
     table = '\n'.join(table_lines)
     body_st.append(table)
-    print(listToString(body_st))
+    
+print(listToString(body_st)) 
