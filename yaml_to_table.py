@@ -92,13 +92,6 @@ for line in lines:
     else:
         updated_lines.append(line)
 
-updated_lines.extend(body_st)
-references_found = False
-for line in updated_lines:
-    if line.strip() == "## References":
-        references_found = True
-        break
-
 if not references_found:
     updated_lines.append("## References\n\n")
     updated_lines.extend(references_block)
