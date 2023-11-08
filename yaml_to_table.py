@@ -93,7 +93,6 @@ for line in lines:
     elif line.strip() == "## References":
         in_supported_currencies = False
         table_started = False
-        updated_lines.append(line)
     elif not in_supported_currencies and not table_started:
         updated_lines.append(line)
 
