@@ -83,6 +83,7 @@ with open("README.md", "r") as file:
 
 in_block = False
 updated_lines = []
+
 for line in lines:
     if line.strip() == "## Supported Currencies":
         in_block = True
@@ -93,7 +94,14 @@ for line in lines:
     if line.strip() == "## References":
         in_block = False
 
-with open("README.md", "w") as file:
+with open("updated_readme.md", "w") as file:
     file.writelines(updated_lines)
+
+with open("README.md", "a") as file:
+    file.write("\n\n")
+    file.write("## Updated Supported Currencies\n\n")
+    with open("updated_readme.md", "r") as updated_file:
+        updated_lines = updated_file.readlines()
+        file.writelines(updated_lines)
 
 print(listToString(body_st))

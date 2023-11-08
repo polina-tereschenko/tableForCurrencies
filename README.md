@@ -41,3 +41,10 @@ Available for [Dart](https://pub.dev/packages/freemework_enum_currency), [C#](TD
 | XRP  |    7     |         |                    | :heavy_check_mark: |        Ripple        |               https://ripple.com/xrp               |
 | XTZ  |    6     |         |                    | :heavy_check_mark: |        Tezos         |                 https://tezos.com/                 |
 | UAH  |    2     |   980   | :heavy_check_mark: |                    |  Ukrainian hryvnia   |                                                    |
+
+
+## Refrences
+
+* [Currency List](https://github.com/umpirsky/currency-list)
+* [CashMoney ISO Currencies](https://github.com/cashmoneyjs/iso-currencies)
+* [ISO 4217 currency codes](https://github.com/zbrox/iso_currency)
