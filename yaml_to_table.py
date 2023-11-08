@@ -89,9 +89,6 @@ for line in lines:
         in_supported_currencies = True
         updated_lines.append(line)
         updated_lines.extend(body_st)
-    elif in_supported_currencies and line.strip() == "## References":
-        in_supported_currencies = False
-        updated_lines.append(line)
     elif not in_supported_currencies:
         updated_lines.append(line)
 
