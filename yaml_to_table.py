@@ -78,26 +78,4 @@ with open(INPUT_YAML) as file:
     table = '\n'.join(table_lines)
     body_st.append(table)
 
-with open("README.md", "r") as file:
-    lines = file.readlines()
-
-in_supported_currencies = False
-updated_lines = []
-table_started = False
-references_lines = []
-replaced_table = False
-
-for line in lines:
-    if line.strip() == "## Supported Currencies":
-        in_supported_currencies = True
-        updated_lines.append(line)
-        table_started = True
-    elif line.strip() == "## References":
-        in_supported_currencies = False
-        
-updated_lines.extend(references_lines)
-
-with open("README.md", "w") as file:
-    file.writelines(updated_lines)
-
 print(listToString(body_st))
