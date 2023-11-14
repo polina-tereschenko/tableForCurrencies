@@ -24,11 +24,19 @@ jobs:
       - name: Install prettytable
         run: pip install PrettyTable
 
-      - name: Install prettytable
+      - name: Install Path
         run: pip install Path
 
-      - name: Run Python script
-        run: python yaml_to_table.py 
+      - name: Update README.md
+        run: |
+          cat README.md | head -n 10 >> README.new.md
+          python yaml_to_table.py >> README.new.md
+          cat README.md | tail -n +45 >> README.new.md
+
+        - name: Update README.md
+        run: |
+          delete README.md
+          rename README.new.md >> README.md
 
       - name: Update README
         run: |
