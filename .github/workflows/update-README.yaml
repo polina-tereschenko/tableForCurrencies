@@ -15,17 +15,12 @@ jobs:
         with:
           python-version: 3
 
-      - name: Install PyYAML
-        run: pip install PyYAML
-
-      - name: Install oyaml
-        run: pip install oyaml
-
-      - name: Install prettytable
-        run: pip install PrettyTable
-
-      - name: Install Path
-        run: pip install Path
+      - name: Install Python dependencies
+        run: |
+          pip install PyYAML
+          pip install oyaml
+          pip install PrettyTable
+          pip install Path
 
       - name: Update README
         run: |
@@ -33,12 +28,12 @@ jobs:
           python yaml_to_table.py >> README.new.md
           cat README.md | tail -n +45 >> README.new.md
 
-        - name: rename README
+      - name: Rename README
         run: |
-          delete README.md
-          rename README.new.md >> README.md
+          rm README.md
+          mv README.new.md README.md
 
-      - name: git push README
+      - name: Git Push README
         run: |
           git config --global user.email "polinatereschenko16@gmail.com"
           git config --global user.name "GitHub Action"
