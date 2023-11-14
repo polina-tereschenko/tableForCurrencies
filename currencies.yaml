@@ -182,3 +182,11 @@
    Crypto: 
    Title: Ukrainian hryvnia
    Reference URL: https://en.wikipedia.org/wiki/Ukrainian_hryvnia
+-
+   Code: XTZ
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Tezos
+   Reference URL: https://tezos.com/
