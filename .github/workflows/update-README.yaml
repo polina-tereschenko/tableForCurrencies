@@ -24,12 +24,11 @@ jobs:
 
       - name: Update README
         run: |
-          cat README.md | head -n 10 >> README.new.md
+          INX1=$(cat README.md | grep -n '# Enum Of Currencies'  | cut -d: -f1)
+          INX2=$(cat README.md | grep -n '## Refrences'  | cut -d: -f1)
+          cat README.md | head -n echo $INX1 >> README.new.md
           python yaml_to_table.py >> README.new.md
-          cat README.md | tail -n +45 >> README.new.md
-
-      - name: Rename README
-        run: |
+          cat README.md | tail -n +echo $INX2 >> README.new.md
           rm README.md
           mv README.new.md README.md
 
