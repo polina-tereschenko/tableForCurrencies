@@ -198,3 +198,51 @@
    Crypto: 
    Title: Ukrainian hryvnia
    Reference URL: https://en.wikipedia.org/wiki/Ukrainian_hryvnia
+-
+   Code: TRX
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: TRON
+   Reference URL: https://tron.network/
+-
+   Code: USD
+   Exponent: 2
+   Iso4217: 840
+   Fiat: ":heavy_check_mark:"
+   Crypto: 
+   Title: United States dollar
+   Reference URL: https://en.wikipedia.org/wiki/United_States_dollar
+-
+   Code: USDT
+   Exponent: 18
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Tether
+   Reference URL: https://tether.to/
+-
+   Code: XLM
+   Exponent: 7
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Stellar
+   Reference URL: https://www.stellar.org/
+-
+   Code: XRP
+   Exponent: 7
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Ripple
+   Reference URL: https://ripple.com/xrp
+-
+   Code: XTZ
+   Exponent: 6
+   Iso4217: 
+   Fiat: 
+   Crypto: ":heavy_check_mark:"
+   Title: Tezos
+   Reference URL: https://tezos.com/
