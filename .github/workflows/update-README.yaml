@@ -24,8 +24,8 @@ jobs:
 
       - name: Update README
         run: |
-          INX1=$(awk '/# Enum Of Currencies/{print NR; exit}' README.md)
-          INX2=$(awk '/## Refrences/{print NR; exit}' README.md)
+          INX1=$(cat README.md | grep -n '# Enum Of Currencies'  | cut -d: -f1)
+          INX2=$(cat README.md | grep -n '## Refrences'  | cut -d: -f1)
           cat README.md | head -n $INX1 >> README.new.md
           python yaml_to_table.py >> README.new.md
           cat README.md | tail -n +$INX2 >> README.new.md
